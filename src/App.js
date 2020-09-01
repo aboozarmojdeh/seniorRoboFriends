@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component, Fragment} from 'react';
+import 'tachyons';
 import './App.css';
+import CardList from './components/Card/CardList';
+import SearchBox from './SearchBox/SearchBox';
+import {robots} from './robots';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render(){
+    return (
+      <Fragment>
+      <div className="f1 tc">
+        <h1>Senior Robo Friends</h1>
+        <SearchBox />
+       <CardList robots={robots} />
+       
+      </div>
+      </Fragment>
+    );
+  }
+ 
 }
 
 export default App;
