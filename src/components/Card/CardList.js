@@ -8,7 +8,9 @@ const CardList = ({ robots }) => {
     })
     return (
         <Fragment>
+        <div>
             {cardArray}
+        </div>
         </Fragment>
     )
 };
