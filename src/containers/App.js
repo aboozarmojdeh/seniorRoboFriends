@@ -4,6 +4,7 @@ import "./App.css";
 import CardList from "../components/Card/CardList";
 import SearchBox from "../components/SearchBox/SearchBox";
 import Scroll from "../components/Scroll/Scroll";
+import ErrorBoundry from '../components/ErrorBoundry/ErrorBoundry';
 import axios from "axios";
 
 class App extends Component {
@@ -55,7 +56,9 @@ class App extends Component {
             <h1 className="f1 app-header-text">Senior Robo Friends</h1>
             <SearchBox onSearchChange={this.onSearchChange} />
             <Scroll>
+              <ErrorBoundry>
               <CardList robots={filteredRobots} />
+              </ErrorBoundry>
             </Scroll>
           </div>
         </Fragment>
